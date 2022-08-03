@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 import assemblyscript from "assemblyscript";
 import prettier from "prettier";
 import * as fs from "fs";

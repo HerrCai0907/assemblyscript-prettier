@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "prettier for assemblyscript",
   "bin": {
-    "as-prettier.mjs": "index.mjs"
+    "as-prettier": "index.mjs"
   },
   "main": "index.mjs",
   "scripts": {},
