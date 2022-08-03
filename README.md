@@ -1,6 +1,6 @@
 # assemblyscript-prettier
 
-prettier for assemblyscript
+prettier for assemblyscript.
 
 ## Install
 
@@ -11,7 +11,7 @@ npm i -D assemblyscript-prettier
 ## Usage
 
 ```
-Usage: index [options] <input-file>
+as-prettier [options] <input-file>
 
 Arguments:
   input-file   format file
