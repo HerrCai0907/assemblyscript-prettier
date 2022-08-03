@@ -163,7 +163,13 @@ program
         })
       );
       b1.stop();
-      warning(`Code style issues found in following files. Forgot to run Prettier?\n${failedFiles.join("\n")}`);
+      if (failedFiles.length > 0) {
+        warning("Code style issues found in following files. Forgot to run Prettier?");
+        log(`${failedFiles.map((v) => `- '${v}'`).join("\n")}`);
+        exit(-1);
+      } else {
+        success("Perfect code style!");
+      }
     } else if (opts.write) {
       b1.start(filterFiles.length, 0, { file: "N/A" });
       await Promise.all(
