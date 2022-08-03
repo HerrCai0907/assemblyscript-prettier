@@ -6,7 +6,9 @@
     "as-prettier": "index.mjs"
   },
   "main": "index.mjs",
-  "scripts": {},
+  "scripts": {
+    "version": "conventional-changelog -i CHANGELOG.md -s -p angular && git add CHANGELOG.md"
+  },
   "author": "congcongcai0907@163.com",
   "license": "MIT",
   "publishConfig": {
@@ -30,6 +32,7 @@
   },
   "devDependencies": {
     "@types/cli-progress": "^3.11.0",
-    "@types/prettier": "^2.6.4"
+    "@types/prettier": "^2.6.4",
+    "conventional-changelog-cli": "^2.2.2"
   }
 }
