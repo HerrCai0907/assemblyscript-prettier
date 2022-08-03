@@ -21,14 +21,16 @@
   "bugs": {
     "url": "https://github.com/HerrCai0907/assemblyscript-prettier/issues"
   },
+  "peerDependencies": {
+    "assemblyscript": "^0.20.0",
+    "prettier": "^2.7.1"
+  },
   "dependencies": {
-    "assemblyscript": "^0.20.16",
     "chalk": "^5.0.1",
     "cli-progress": "^3.11.2",
     "commander": "^9.4.0",
     "fast-glob": "^3.2.11",
-    "ignore": "^5.2.0",
-    "prettier": "^2.7.1"
+    "ignore": "^5.2.0"
   },
   "devDependencies": {
     "@types/cli-progress": "^3.11.0",
