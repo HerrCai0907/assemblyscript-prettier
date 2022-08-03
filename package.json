@@ -1,6 +1,6 @@
 {
   "name": "assemblyscript-prettier",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "prettier for assemblyscript",
   "bin": {
     "as-prettier": "index.mjs"
