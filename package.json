@@ -11,6 +11,10 @@
   },
   "author": "congcongcai0907@163.com",
   "license": "MIT",
+  "keywords": [
+    "assemblyscript",
+    "prettier"
+  ],
   "publishConfig": {
     "access": "public"
   },
