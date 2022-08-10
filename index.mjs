@@ -139,7 +139,7 @@ program
     const files = FastGlob.sync(input, { dot: true });
     const ig = ignore().add("node_modules");
     if (fs.existsSync(".prettierignore")) {
-      ig.add(fs.readFileSync(filename, { encoding: "utf8" }));
+      ig.add(fs.readFileSync(".prettierignore", { encoding: "utf8" }));
     }
     const filterFiles = ig.filter(files).filter((v) => v.endsWith(".ts"));
     const b1 = new SingleBar({
