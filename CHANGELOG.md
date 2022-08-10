@@ -1,3 +1,13 @@
+## [1.0.4](https://github.com/HerrCai0907/assemblyscript-prettier/compare/1.0.3...1.0.4) (2022-08-10)
+
+
+### Bug Fixes
+
+* prettierignore path error ([5d945a5](https://github.com/HerrCai0907/assemblyscript-prettier/commit/5d945a591708216ba52ba7ac858779cd16e5f1d8))
+* rename ignore file name to avoid collision ([72c9a3b](https://github.com/HerrCai0907/assemblyscript-prettier/commit/72c9a3bef8e1bcd480c2582b2703ef142d3aea1f))
+
+
+
 ## [1.0.3](https://github.com/HerrCai0907/assemblyscript-prettier/compare/1.0.2...1.0.3) (2022-08-05)
 
 
