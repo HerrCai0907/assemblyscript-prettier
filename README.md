@@ -21,3 +21,5 @@ Options:
   -w, --write  Edit files in-place. (Beware!)
   -h, --help   display help for command
 ```
+
+ignore file name: .asprettierignore

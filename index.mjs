@@ -138,8 +138,8 @@ program
     }
     const files = FastGlob.sync(input, { dot: true });
     const ig = ignore().add("node_modules");
-    if (fs.existsSync(".prettierignore")) {
-      ig.add(fs.readFileSync(".prettierignore", { encoding: "utf8" }));
+    if (fs.existsSync(".asprettierignore")) {
+      ig.add(fs.readFileSync(".asprettierignore", { encoding: "utf8" }));
     }
     const filterFiles = ig.filter(files).filter((v) => v.endsWith(".ts"));
     const b1 = new SingleBar({
