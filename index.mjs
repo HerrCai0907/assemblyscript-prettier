@@ -1,6 +1,10 @@
 #!/usr/bin/env node
 
 import assemblyscript from "assemblyscript";
+import {
+  NodeKind,
+} from "assemblyscript/dist/assemblyscript.js";
+
 import prettier from "prettier";
 import * as fs from "fs";
 import { Command } from "commander";
@@ -26,29 +30,27 @@ function preProcess(code) {
   }
   let source = program.sources[0];
 
-  let NodeKind = assemblyscript.NodeKind;
-
   function visitDecorators(node) {
     let list = [];
     let _visit = (_node) => {
       switch (_node.kind) {
-        case NodeKind.SOURCE: {
+        case NodeKind.Source: {
           _node.statements.forEach((statement) => {
             _visit(statement);
           });
           break;
         }
-        case NodeKind.CLASSDECLARATION:
-        case NodeKind.INTERFACEDECLARATION:
-        case NodeKind.NAMESPACEDECLARATION: {
+        case NodeKind.ClassDeclaration:
+        case NodeKind.InterfaceDeclaration:
+        case NodeKind.NamespaceDeclaration: {
           _node.members.forEach((statement) => {
             _visit(statement);
           });
           break;
         }
-        case NodeKind.ENUMDECLARATION:
-        case NodeKind.METHODDECLARATION:
-        case NodeKind.FUNCTIONDECLARATION: {
+        case NodeKind.EnumDeclaration:
+        case NodeKind.MethodDeclaration:
+        case NodeKind.FunctionDeclaration: {
           if (_node.decorators) {
             list.push(
               ..._node.decorators.map((decorator) => {
