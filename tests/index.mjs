@@ -1,7 +1,7 @@
 import { execSync } from "child_process";
 import { fileURLToPath } from "url";
 import { dirname, relative, resolve } from "path";
-import { copyFileSync, mkdirSync } from "fs";
+import { copyFileSync, existsSync, mkdirSync, statSync } from "fs";
 import chalk from "chalk";
 import { argv, cwd } from "process";
 const __filename = fileURLToPath(import.meta.url);
@@ -15,7 +15,9 @@ const targetFile = relative(cwd(), resolve(__dirname, "example.ts"));
 const as_version = argv[2] ?? 20;
 
 console.log(chalk.green(`start test prettier for as v0.${as_version}.x`));
-mkdirSync(testFolder);
+if (!existsSync(testFolder)) {
+  mkdirSync(testFolder);
+}
 execSync(`cd ${testFolder} && npm init -y && npm i prettier@2.7`);
 execSync(`cd ${testFolder} && npm i assemblyscript@0.${as_version}`);
 console.log(chalk.green("init node_modules done"));
