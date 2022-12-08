@@ -7,6 +7,8 @@
   },
   "main": "index.mjs",
   "scripts": {
+    "lint": "prettier -c .",
+    "test": "node tests/index.mjs",
     "version": "conventional-changelog -i CHANGELOG.md -s -p angular && git add CHANGELOG.md"
   },
   "author": "congcongcai0907@163.com",
@@ -26,7 +28,7 @@
     "url": "https://github.com/HerrCai0907/assemblyscript-prettier/issues"
   },
   "peerDependencies": {
-    "assemblyscript": "^0.22.0",
+    "assemblyscript": "^0.21.0",
     "prettier": "^2.7.1"
   },
   "dependencies": {
