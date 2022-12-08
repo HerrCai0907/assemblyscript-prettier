@@ -1,11 +1,18 @@
+## [1.0.6](https://github.com/HerrCai0907/assemblyscript-prettier/compare/1.0.5...1.0.6) (2022-12-08)
+
+
+### Bug Fixes
+
+* match assemblyscript v22 enum identifiers to TitleCase ([1b06f6b](https://github.com/HerrCai0907/assemblyscript-prettier/commit/1b06f6b6b4841b2bf1345168d5c29c5cb6aa8d0d))
+
+
+
 ## [1.0.5](https://github.com/HerrCai0907/assemblyscript-prettier/compare/1.0.3...1.0.5) (2022-10-25)
 
 
 ### Bug Fixes
 
-* prettierignore path error ([5d945a5](https://github.com/HerrCai0907/assemblyscript-prettier/commit/5d945a591708216ba52ba7ac858779cd16e5f1d8))
-* rename ignore file name to avoid collision ([72c9a3b](https://github.com/HerrCai0907/assemblyscript-prettier/commit/72c9a3bef8e1bcd480c2582b2703ef142d3aea1f))
-
+* update to assemblyscript 22 ([6ceb378](https://github.com/HerrCai0907/assemblyscript-prettier/commit/6ceb378a3fb40516df06a31f7560d8c9a4471c0b))
 
 
 ## [1.0.4](https://github.com/HerrCai0907/assemblyscript-prettier/compare/1.0.3...1.0.4) (2022-08-10)
