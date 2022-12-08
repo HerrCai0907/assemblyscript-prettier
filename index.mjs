@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 import assemblyscript from "assemblyscript";
+import asc from "assemblyscript/asc";
 import prettier from "prettier";
 import * as fs from "fs";
 import { Command } from "commander";
@@ -9,6 +10,8 @@ import { exit } from "process";
 import chalk from "chalk";
 import ignore from "ignore";
 import { SingleBar } from "cli-progress";
+
+const ascMajorVersion = parseInt(asc.version.split(".")[1]);
 
 const readFile = fs.promises.readFile;
 const writeFile = fs.promises.writeFile;
@@ -27,39 +30,72 @@ function preProcess(code) {
   let source = program.sources[0];
 
   let NodeKind = assemblyscript.NodeKind;
-
   function visitDecorators(node) {
     let list = [];
     let _visit = (_node) => {
-      switch (_node.kind) {
-        case NodeKind.SOURCE: {
-          _node.statements.forEach((statement) => {
-            _visit(statement);
-          });
-          break;
-        }
-        case NodeKind.CLASSDECLARATION:
-        case NodeKind.INTERFACEDECLARATION:
-        case NodeKind.NAMESPACEDECLARATION: {
-          _node.members.forEach((statement) => {
-            _visit(statement);
-          });
-          break;
-        }
-        case NodeKind.ENUMDECLARATION:
-        case NodeKind.METHODDECLARATION:
-        case NodeKind.FUNCTIONDECLARATION: {
-          if (_node.decorators) {
-            list.push(
-              ..._node.decorators.map((decorator) => {
-                return {
-                  start: decorator.range.start,
-                  end: decorator.range.end,
-                };
-              })
-            );
+      if (ascMajorVersion < 22) {
+        switch (_node.kind) {
+          case NodeKind.SOURCE: {
+            _node.statements.forEach((statement) => {
+              _visit(statement);
+            });
+            break;
           }
-          break;
+          case NodeKind.CLASSDECLARATION:
+          case NodeKind.INTERFACEDECLARATION:
+          case NodeKind.NAMESPACEDECLARATION: {
+            _node.members.forEach((statement) => {
+              _visit(statement);
+            });
+            break;
+          }
+          case NodeKind.ENUMDECLARATION:
+          case NodeKind.METHODDECLARATION:
+          case NodeKind.FUNCTIONDECLARATION: {
+            if (_node.decorators) {
+              list.push(
+                ..._node.decorators.map((decorator) => {
+                  return {
+                    start: decorator.range.start,
+                    end: decorator.range.end,
+                  };
+                })
+              );
+            }
+            break;
+          }
+        }
+      } else {
+        switch (_node.kind) {
+          case NodeKind.Source: {
+            _node.statements.forEach((statement) => {
+              _visit(statement);
+            });
+            break;
+          }
+          case NodeKind.ClassDeclaration:
+          case NodeKind.InterfaceDeclaration:
+          case NodeKind.NamespaceDeclaration: {
+            _node.members.forEach((statement) => {
+              _visit(statement);
+            });
+            break;
+          }
+          case NodeKind.EnumDeclaration:
+          case NodeKind.MethodDeclaration:
+          case NodeKind.FunctionDeclaration: {
+            if (_node.decorators) {
+              list.push(
+                ..._node.decorators.map((decorator) => {
+                  return {
+                    start: decorator.range.start,
+                    end: decorator.range.end,
+                  };
+                })
+              );
+            }
+            break;
+          }
         }
       }
     };
@@ -103,8 +139,8 @@ async function format(path) {
   const tsCode = preProcess(code);
   let config = await resolveConfig(path);
   const formatTsCode = prettier.format(tsCode, config);
-  const foramtCode = postProcess(formatTsCode);
-  return foramtCode;
+  const formatCode = postProcess(formatTsCode);
+  return formatCode;
 }
 async function check(path) {
   const code = await readFile(path, { encoding: "utf8" });
