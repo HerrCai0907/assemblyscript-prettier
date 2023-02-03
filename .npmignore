@@ -1,4 +1,9 @@
 .vscode
+.github
+node_modules
+tests
 .gitignore
+.npmignore
+.prettierignore
 .prettierrc.yaml
 package-lock.json
