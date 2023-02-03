@@ -1,3 +1,12 @@
+## [1.0.7](https://github.com/HerrCai0907/assemblyscript-prettier/compare/1.0.6...1.0.7) (2023-02-03)
+
+
+### Bug Fixes
+
+* add missing npmignore ([e584da4](https://github.com/HerrCai0907/assemblyscript-prettier/commit/e584da42952e267adcb917d8b9fda5cd3e57297d))
+
+
+
 ## [1.0.6](https://github.com/HerrCai0907/assemblyscript-prettier/compare/1.0.5...1.0.6) (2022-12-08)
 
 
