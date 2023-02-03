@@ -1,7 +1,7 @@
 import { execSync } from "child_process";
 import { fileURLToPath } from "url";
 import { dirname, relative, resolve } from "path";
-import { copyFileSync, existsSync, mkdirSync, statSync } from "fs";
+import { copyFileSync, existsSync, mkdirSync } from "fs";
 import chalk from "chalk";
 import { argv, cwd } from "process";
 const __filename = fileURLToPath(import.meta.url);
