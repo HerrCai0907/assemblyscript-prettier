@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`block comment 1`] = `
+"/*1*/
+@lazy /*2*/ let offset = 1;
+/*3*/
+@lazy /*4*/ let offset = 1;
+/*5*/
+"
+`;
+
+exports[`line comment 1`] = `
+"// 1
+@lazy
+//2
+let offset = 1;
+// 3
+"
+`;

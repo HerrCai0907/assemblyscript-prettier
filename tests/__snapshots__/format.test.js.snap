@@ -2,13 +2,15 @@
 
 exports[`class decorator 1`] = `
 "
-@global @unsafe export class AA {}
+@global @unsafe
+export class AA {}
 "
 `;
 
 exports[`function decorator 1`] = `
 "
-@global @unsafe export function __new(size: usize, id: i32): usize {}
+@global @unsafe
+export function __new(size: usize, id: i32): usize {}
 "
 `;
 
