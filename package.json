@@ -8,6 +8,7 @@
     "lint": "prettier -c .",
     "lint:fix": "prettier -w .",
     "test": "NODE_OPTIONS=--experimental-vm-modules jest",
+    "test:create": "NODE_OPTIONS=--experimental-vm-modules jest --updateSnapshot",
     "version": "conventional-changelog -i CHANGELOG.md -s -p angular && git add CHANGELOG.md"
   },
   "author": "congcongcai0907@163.com",

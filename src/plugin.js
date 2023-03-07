@@ -25,18 +25,7 @@ function initPrinter(jsPlugin) {
 
 function parse(text, options) {
   initPrinter(options.plugins.find((plugin) => plugin.printers && plugin.printers.estree));
-
-  let processedText = preProcess(text);
-  let ast = pluginTypescript.parsers.typescript.parse(processedText, options);
-
-  for (let comment of ast.comments) {
-    let value = comment.value;
-    if (value.startsWith(magic) && value.endsWith(magic)) {
-      comment.range[0] += magic.length + 2;
-      comment.range[1] -= magic.length + 2;
-    }
-  }
-
+  let ast = pluginTypescript.parsers.typescript.parse(text, options);
   return ast;
 }
 
@@ -46,6 +35,7 @@ export default {
       ...pluginTypescript.parsers.typescript,
       parse,
       astFormat: "as-estree",
+      preprocess: preProcess,
     },
   },
   printers: { "as-estree": as_estree },
