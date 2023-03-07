@@ -1,3 +1,12 @@
+# [2.0.0](https://github.com/HerrCai0907/assemblyscript-prettier/compare/v1.0.7...v2.0.0) (2023-03-07)
+
+
+### Features
+
+* refactor as prettier plugin ([1d23473](https://github.com/HerrCai0907/assemblyscript-prettier/commit/1d23473d6ca02aae6f5b0d57fcf2759a5b3528df))
+
+
+
 ## [1.0.7](https://github.com/HerrCai0907/assemblyscript-prettier/compare/1.0.6...1.0.7) (2023-02-03)
 
 
