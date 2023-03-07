@@ -6,20 +6,16 @@ prettier for assemblyscript.
 
 ```bash
 npm i -D assemblyscript-prettier
+npm i -D prettier@3.0.0-alpha.6
 ```
 
 ## Usage
 
+add plugin in prettier config. For example `.prettierrc`
+
+```json
+{
+  "pluginSearchDirs": ["node_modules"],
+  "plugins": ["assemblyscript-prettier"]
+}
 ```
-as-prettier [options] <input-file>
-
-Arguments:
-  input-file   format file
-
-Options:
-  -c, --check  Check if the given files are formatted
-  -w, --write  Edit files in-place. (Beware!)
-  -h, --help   display help for command
-```
-
-ignore file name: .asprettierignore
