@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`class decorator 1`] = `
+"
+@global @unsafe export class AA {}
+"
+`;
+
+exports[`function decorator 1`] = `
+"
+@global @unsafe export function __new(size: usize, id: i32): usize {}
+"
+`;
+
+exports[`variant decorator 1`] = `
+"
+@lazy let offset: usize = startOffset;
+"
+`;
