@@ -1,3 +1,7 @@
+## [2.0.2](https://github.com/HerrCai0907/assemblyscript-prettier/compare/2.0.1...2.0.2) (2023-03-09)
+
+
+
 ## [2.0.1](https://github.com/HerrCai0907/assemblyscript-prettier/compare/v1.0.7...v2.0.1) (2023-03-07)
 
 
