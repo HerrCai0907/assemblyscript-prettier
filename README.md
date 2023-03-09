@@ -1,6 +1,10 @@
 # assemblyscript-prettier
 
-prettier for assemblyscript.
+prettier plugin for assemblyscript.
+
+This is version 2 and require `prettier@3`(still in alpha stage)
+
+If you want to use `prettier@2`, please see [version 1](https://www.npmjs.com/package/assemblyscript-prettier/v/1.0.7)
 
 ## Install
 
