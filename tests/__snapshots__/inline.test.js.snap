@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`inline variable 1`] = `
+"
+@inline
+const EXPECT_MAX_INDEX = 2147483647;
+"
+`;
