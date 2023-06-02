@@ -2,7 +2,7 @@
 
 
 
-## [2.0.1](https://github.com/HerrCai0907/assemblyscript-prettier/compare/v1.0.7...v2.0.1) (2023-03-07)
+## [2.0.1](https://github.com/HerrCai0907/assemblyscript-prettier/compare/2.0.0...2.0.1) (2023-03-07)
 
 
 ### Bug Fixes
@@ -10,18 +10,13 @@
 * comment will cause decoretor dislocation ([#9](https://github.com/HerrCai0907/assemblyscript-prettier/issues/9)) ([a4961e6](https://github.com/HerrCai0907/assemblyscript-prettier/commit/a4961e654680914dd34056488c907afe55a4454b))
 
 
+
+# [2.0.0](https://github.com/HerrCai0907/assemblyscript-prettier/compare/1.0.7...2.0.0) (2023-03-07)
+
+
 ### Features
 
 * refactor as prettier plugin ([#8](https://github.com/HerrCai0907/assemblyscript-prettier/issues/8)) ([2d34e9b](https://github.com/HerrCai0907/assemblyscript-prettier/commit/2d34e9b373cabb8aec00aa7bd0c191614750bef5))
-
-
-
-# [2.0.0](https://github.com/HerrCai0907/assemblyscript-prettier/compare/v1.0.7...v2.0.0) (2023-03-07)
-
-
-### Features
-
-* refactor as prettier plugin ([1d23473](https://github.com/HerrCai0907/assemblyscript-prettier/commit/1d23473d6ca02aae6f5b0d57fcf2759a5b3528df))
 
 
 
@@ -43,12 +38,8 @@
 
 
 
-## [1.0.5](https://github.com/HerrCai0907/assemblyscript-prettier/compare/1.0.3...1.0.5) (2022-10-25)
+## [1.0.5](https://github.com/HerrCai0907/assemblyscript-prettier/compare/1.0.4...1.0.5) (2022-10-25)
 
-
-### Bug Fixes
-
-* update to assemblyscript 22 ([6ceb378](https://github.com/HerrCai0907/assemblyscript-prettier/commit/6ceb378a3fb40516df06a31f7560d8c9a4471c0b))
 
 
 ## [1.0.4](https://github.com/HerrCai0907/assemblyscript-prettier/compare/1.0.3...1.0.4) (2022-08-10)
@@ -85,6 +76,10 @@
 ### Bug Fixes
 
 * miss shenbang ([ba5ba4b](https://github.com/HerrCai0907/assemblyscript-prettier/commit/ba5ba4bcc59a56604a8f08d31172b99ca05a3cca))
+
+
+
+# 1.0.0 (2022-08-03)
 
 
 
