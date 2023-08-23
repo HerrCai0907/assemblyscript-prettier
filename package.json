@@ -1,6 +1,6 @@
 {
   "name": "assemblyscript-prettier",
-  "version": "2.0.2",
+  "version": "0.0.0",
   "description": "prettier for assemblyscript",
   "main": "src/plugin.js",
   "type": "module",
@@ -9,7 +9,7 @@
     "lint:fix": "prettier -w .",
     "test": "NODE_OPTIONS=--experimental-vm-modules jest",
     "test:create": "NODE_OPTIONS=--experimental-vm-modules jest --updateSnapshot",
-    "version": "conventional-changelog -i CHANGELOG.md -s -p angular && git add CHANGELOG.md"
+    "version": "conventional-changelog -o CHANGELOG.md -p angular -r 0"
   },
   "author": "congcongcai0907@163.com",
   "license": "MIT",
@@ -21,6 +21,12 @@
   "publishConfig": {
     "access": "public"
   },
+  "files": [
+    "package.json",
+    "README.md",
+    "CHANGELOG.md",
+    "src/*"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/HerrCai0907/assemblyscript-prettier.git"

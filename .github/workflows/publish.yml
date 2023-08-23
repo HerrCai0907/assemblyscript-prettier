@@ -2,17 +2,22 @@ name: publish
 
 on:
   push:
-    branches: ["main"]
+    tags:
+      - "*"
 
 jobs:
   publish:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
         with:
-          node-version: 16
-      - uses: JS-DevTools/npm-publish@v1
-        with:
-          token: ${{ secrets.NPM_TOKEN }}
-          greater-version-only: true
+          node-version: "18.x"
+      - name: Install dependencies
+        run: npm ci
+
+      - run: npm version $(echo "${GITHUB_REF}" | sed 's/refs\/tags\///') --git-tag-version false
+      - run: echo "//registry.npmjs.org/:_authToken=${NODE_AUTH_TOKEN}" >> .npmrc
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - run: npm publish
