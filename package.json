@@ -29,7 +29,7 @@
     "url": "https://github.com/HerrCai0907/assemblyscript-prettier/issues"
   },
   "peerDependencies": {
-    "prettier": ">=3.0.0-alpha.4"
+    "prettier": "^3.0.0"
   },
   "dependencies": {
     "assemblyscript": "~0.27.0"
