@@ -4,9 +4,11 @@ import { builders } from "prettier/doc";
 
 let as_estree = {};
 
-function initPrinter(jsPlugin) {
+async function initPrinter(jsPlugin) {
+  let estree = jsPlugin.printers.estree;
+  estree = typeof estree == "function" ? await estree() : estree;
   Object.assign(as_estree, {
-    ...jsPlugin.printers.estree,
+    ...estree,
     printComment(commentPath, options) {
       let comment = commentPath.getValue().value;
       if (comment.startsWith(magic) && comment.endsWith(magic)) {
@@ -23,8 +25,8 @@ function initPrinter(jsPlugin) {
   });
 }
 
-function parse(text, options) {
-  initPrinter(options.plugins.find((plugin) => plugin.printers && plugin.printers.estree));
+async function parse(text, options) {
+  await initPrinter(options.plugins.find((plugin) => plugin.printers && plugin.printers.estree));
   let ast = pluginTypescript.parsers.typescript.parse(text, options);
   return ast;
 }

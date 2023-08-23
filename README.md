@@ -10,7 +10,7 @@ If you want to use `prettier@2`, please see [version 1](https://www.npmjs.com/pa
 
 ```bash
 npm i -D assemblyscript-prettier
-npm i -D prettier@3.0.0-alpha.6
+npm i -D prettier@3.0.0
 ```
 
 ## Usage
