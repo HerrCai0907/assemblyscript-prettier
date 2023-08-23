@@ -8,8 +8,7 @@
     "lint": "prettier -c .",
     "lint:fix": "prettier -w .",
     "test": "NODE_OPTIONS=--experimental-vm-modules jest",
-    "test:create": "NODE_OPTIONS=--experimental-vm-modules jest --updateSnapshot",
-    "version": "conventional-changelog -o CHANGELOG.md -p angular -r 0"
+    "test:create": "NODE_OPTIONS=--experimental-vm-modules jest --updateSnapshot"
   },
   "author": "congcongcai0907@163.com",
   "license": "MIT",
@@ -24,7 +23,6 @@
   "files": [
     "package.json",
     "README.md",
-    "CHANGELOG.md",
     "src/*"
   ],
   "repository": {
@@ -41,7 +39,6 @@
     "assemblyscript": "~0.27.0"
   },
   "devDependencies": {
-    "conventional-changelog-cli": "^2.2.2",
     "jest": "^29.5.0"
   }
 }
